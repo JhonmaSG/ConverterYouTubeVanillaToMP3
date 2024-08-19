@@ -15,4 +15,6 @@ Este proyecto es una herramienta para convertir videos de YouTube a formatos de 
 ## Service: Render
 - Visit Youtube Vanilla MP3 : https://converteryoutubevanillatomp3.onrender.com
 
-### Rapidapi: https://rapidapi.com/420vijay47/api/youtube-mp3-downloader2/playground/apiendpoint_48f6caa9-5568-4f28-9794-5209bf1c8705
+## API
+Rapidapi API Youtube MP3 Converter (download)
+- Rapidapi: https://rapidapi.com/420vijay47/api/youtube-mp3-downloader2/playground/apiendpoint_48f6caa9-5568-4f28-9794-5209bf1c8705
