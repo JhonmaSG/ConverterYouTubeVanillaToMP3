@@ -1,8 +1,8 @@
 // Requerimiento packages
 const express = require("express");
-// npm install node-fetch@2
-const fetch = require("node-fetch");
-const request = require('request');
+// npm install node-fetch@2 or axios
+//const fetch = require("node-fetch");
+//const request = require('request');
 const axios = require('axios');
 
 require('dotenv').config()
