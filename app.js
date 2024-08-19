@@ -55,7 +55,7 @@ app.post("/convert-mp3", async (req, res) => {
 });
 
 // Indicate the port number server will run on
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // Start the server
 app.listen(PORT, () => {
