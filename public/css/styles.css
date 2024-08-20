@@ -40,7 +40,7 @@ body{
 }
 
 #form input{
-  width: 300px;
+  width: 400px;
   padding: 14px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -52,8 +52,6 @@ body{
 
 #form button{
   padding: 14px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   border: 1px solid lightgray;
   background-color: whitesmoke;
   cursor: pointer;
@@ -67,6 +65,34 @@ body{
   background-color:  blue;
   border: 1px solid  blue;
   transform: scale(1.1);
+}
+
+
+.btnClear {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#form .btnClear:hover {
+  color:white;
+  background: red;
+  background-color: red;
+  border: 1px solid red;
+  transform: scale(1.1);
+}
+
+#form .btnClear .aClear:hover {
+  color:white;
+  transform: scale(1.1);
+}
+
+.aClear{
+  color: black;
+  text-decoration: none;
+}
+
+#form .aClear:hover {
+  color: white;
 }
 
 .errors{

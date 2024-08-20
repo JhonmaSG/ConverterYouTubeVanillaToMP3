@@ -1,8 +1,5 @@
 // Requerimiento packages
 const express = require("express");
-// npm install node-fetch@2 or axios
-//const fetch = require("node-fetch");
-//const request = require('request');
 const axios = require('axios');
 
 require('dotenv').config()
@@ -15,10 +12,19 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 
 // Needed to parse html data for POST requests
-app.use(express.urlencoded({
-  extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Function to extract video ID from YouTube URL
+function extractVideoId(youtubeUrl) {
+  const videoIdPattern = /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/;
+  const match = youtubeUrl.match(videoIdPattern);
+  if (match) {
+    return match[1]; // The video ID is second capture group
+  } else {
+    throw new Error('No se pudo extraer el ID del video de la URL proporcionada.');
+  }
+}
 
 // GET route
 app.get("/", (req, res) => {
@@ -27,10 +33,17 @@ app.get("/", (req, res) => {
 
 // POST route
 app.post("/convert-mp3", async (req, res) => {
-  const videoId = req.body.videoId;
+  const youtubeUrl = req.body.youtubeUrl; // Cambio aquí para tomar la URL completa
+  console.log(youtubeUrl);
+  if (!youtubeUrl) {
+    return res.render("index", { success: false, message: "Please enter a YouTube URL" });
+  }
 
-  if (!videoId) {
-    return res.render("index", { success: false, message: "Please enter a video ID" });
+  let videoId;
+  try {
+    videoId = extractVideoId(youtubeUrl);
+  } catch (error) {
+    return res.render("index", { success: false, message: error.message });
   }
 
   try {
