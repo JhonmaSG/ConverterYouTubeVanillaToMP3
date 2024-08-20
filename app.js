@@ -34,7 +34,6 @@ app.get("/", (req, res) => {
 // POST route
 app.post("/convert-mp3", async (req, res) => {
   const youtubeUrl = req.body.youtubeUrl; // Cambio aquí para tomar la URL completa
-  console.log(youtubeUrl);
   if (!youtubeUrl) {
     return res.render("index", { success: false, message: "Please enter a YouTube URL" });
   }
