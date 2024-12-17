@@ -154,7 +154,7 @@ footer {
   position: fixed; /* Hace que se quede en la parte inferior */
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to right, #1d3557, #0471a6);
+  background: #1D3557;
   color: white;
   background-image: var(--gradient-bottom);
   background-repeat: no-repeat;
