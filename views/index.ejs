@@ -18,24 +18,35 @@
       <h1><i class="fab fa-youtube"></i> YouTube Vanilla MP3 Converter</h1>
       <h4>Enter the video ID</h4>
       <div>
-        <input type="text" name="youtubeUrl" placeholder="Video URL"><button id="submit-btn" >Convert</button><button id="submit-btn" class="btnClear"><a href="https://converteryoutubevanillatomp3.onrender.com" class="aClear">Clear</a>
+        <input type="text" name="youtubeUrl" placeholder="Video URL"><button id="submit-btn">Convert</button><button
+          id="submit-btn" class="btnClear"><a href="https://converteryoutubevanillatomp3.onrender.com"
+            class="aClear">Clear</a>
         </button>
       </div>
     </form>
   </div>
 
   <div class="bottom-container">
-    <% if (typeof success != "undefined" && success) { %>
+    <% if (typeof success !="undefined" && success) { %>
       <div class="success">
-        <p> <%= song_title %> </p>
+        <p>
+          <%= song_title %>
+        </p>
         <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
       </div>
-    <% } else if (typeof success != "undefined" && !success) { %>
-      <div class="errors">
-        <p> <%= message %> </p>
-      </div>
-    <% } %>
+      <% } else if (typeof success !="undefined" && !success) { %>
+        <div class="errors">
+          <p>
+            <%= message %>
+          </p>
+        </div>
+        <% } %>
   </div>
+
+  <footer>
+    © Todos los derechos reservados - Realizado por <a href="https://github.com/JhonmaSG" target="_blank"
+      class="footer-link">JhonmaSG</a>
+  </footer>
 
 </body>
 

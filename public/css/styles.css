@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Basic&family=Bungee+Tint&family=Coustard:wght@400;900&family=Oswald:wght@200..700&family=Syne:wght@400..800&family=Teko:wght@300..700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --berkeley-blue: #1d3557ff;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -144,6 +149,22 @@ body{
   background-color:  white;
   border: 1px solid  lightgray;
   transform: scale(1.1);
+}
+
+footer {
+  position: fixed; /* Hace que se quede en la parte inferior */
+  bottom: 0;
+  width: 100%;
+  background-color: var(--berkeley-blue);
+  color: white;
+  background-image: var(--gradient-bottom);
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  z-index: 10; /* footer por encima del contenido */
 }
 
 @media(max-width:768px){
